@@ -1,0 +1,27 @@
+RPM	
+ -yum
+ -rpm
+Distros:
+RedHat
+Cent0S
+Fedora
+Oracle
+Scientific
+
+rpm -qa -List all installed packages
+rpm -ivh package.rpm
+
+DEB
+ -apt
+ -dpkg
+Distros:
+Debian 
+Mint
+Ubuntu
+
+dpkg -l -List installed packages
+dpkg -i package.deb -Install package
+
+
+\ -character to start a command in the background
+crontab -to create, read, update and delete cron jobs

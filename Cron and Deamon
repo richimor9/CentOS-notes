@@ -1,0 +1,10 @@
+Cron is the answer for this problem no doubt. The daemon would be needed if you have something that requires sub-minute wake up times or is completely event driven. If you have something that needs to run every 5 minutes you should schedule it with Cron and avoid all the daemon complexities. One thing that I would suggest looking into would to have a lock that will prevent the scripts from running more then one instance at a time.
+
+crontab file Install a new crontab from file
+crontab -l List your cron jobs
+crontab -e Edit your cron jobs
+crontab -r Remove all of your cron jobs
+
+history displays commands that were used
+$HISTSIZE = 1000
+

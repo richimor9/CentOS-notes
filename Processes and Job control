@@ -1,0 +1,21 @@
+ps Display processes status
+Options:
+	-e Everything
+	-f Full format
+	-u Username
+	-p pid 
+ps -e          Display all processes
+ps -ef         Display all processes full
+ps -eH	       Display a process tre	
+ps -e --forest Display a process tre
+ps -u username Display user's processes
+pstree Display processes in tree format
+top Interactive process viewer
+
+bg [%num] Background a suspended process
+fg [%num] foreground a background process
+kill kill a process by job number or PID
+jobs [%num] list jobs
+
+kill -l
+kill %(number) to kill jobs
