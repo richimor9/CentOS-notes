@@ -1,0 +1,30 @@
+fdisk -l | less
+lsblk
+lsblk -f -to view labels
+e2label -to add labels 
+
+File system
+ext = Extended file system (default file system) Linux exclusive
+mkfs -t TYPE DEVICE
+
+mkfs -t ext3 /dev/sdb2 -creates partitions
+mount /dev/sdb3 /opt -mounts devices
+df -h -list of mounted devices
+umount /dev/sdb3/ /opt -umounts device
+mkswap /dev/sdb1
+
+/etc/fstab File System Table
+-Controls what devices get mounted and where on boot.
+-device
+-mount point
+-file system type
+-mount options
+-dump
+-fsck order
+
+UUID (universally unique identifier)
+
+MBR allows 4 primary partitions
+A mount point is simply a directory that is used to access data on a partition.
+mkswap prepares a swap partition for use.
+lsblk and blkid to view a UUID

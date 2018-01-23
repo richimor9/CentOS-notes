@@ -1,0 +1,23 @@
+broadcast address (dirección de difusión) Una dirección común que se usa para dirigir (difundir) un mensaje a todos los sistemas en una red. La dirección de difusión se basa en la dirección de red y la máscara de subred.
+
+A Subnet Mask is used to divide the IP address into network and host addresses. This article explains how to use subnet mask.
+
+¿Qué es subnetting y cómo funciona?
+El subneting es una colección de direcciones IP que permiten definir él numero de redes y de host que se desean utilizar en una subred determinada; el Vlsm es una técnica que permite dividir subredes en redes más pequeñas 
+
+¿Qué es una sub net?
+máscara de subred. Una máscara local de bits (conjunto de indicadores) que especifica qué bits de la dirección IP especifican una red IP determinada o un host dentro de una subred. ... Un valor que permite que una red sea subdividida y proporciona asignaciones de direcciones más complejas.
+
+¿Qué es la dirección de broadcast?
+Consiste en enviar un paquete de datos IP con la dirección 255.255.255.255 . Este paquete solamente alcanzará a los nodos que se encuentran dentro de la misma red física subyacente. En general, la red subyacente será una LAN o un segmento de la LAN.
+
+¿Qué es y para qué sirve la máscara de red?
+La máscara de red o redes es una combinación de bits que sirve para delimitar el ámbito de una red de ordenadores.​ Su función es indicar a los dispositivos qué parte de la dirección IP es el número de la red, incluyendo la subred, y qué parte es la correspondiente al host.
+
+FQDN = fully qualified domain name
+TLD =	.com, .net, .org
+
+DHCP
+
+configuration file controls the order in which lookups are performed?
+/etc/nsswitch.conf

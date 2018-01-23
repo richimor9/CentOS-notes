@@ -9,7 +9,7 @@ Oracle
 Scientific
 
 rpm -qa -List all installed packages
-rpm -ivh package.rpm
+rpm -ivh package.rpm -Install package
 
 DEB
  -apt

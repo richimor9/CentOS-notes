@@ -1,0 +1,58 @@
+UID is always 0 to root account
+passwd command is used to set or change passwords for Linux accounts
+
+/etc/passwd stores information about the users
+and etc/shadow
+rickimor93:x:1000:1000:Ricardo Alberto Morales Ramos:/home/rickimor93:/bin/bash
+
+useradd
+userdel
+usermod
+
+ps -fu rickimor93
+
+/etc/group -stores group information
+
+
+groups rickimor93	to know the group the user is in
+groupadd		create group
+groupdel 		delete group
+groupmod		change 
+-g GID			change group id
+-nGroup 		Rename the group
+
+
+Examples
+[10:41:29 root@localhost rickimor93]#groupadd writers
+[11:02:46 root@localhost rickimor93]#groupadd tv
+[11:02:58 root@localhost rickimor93]#groupadd movie
+[11:03:00 root@localhost rickimor93]#tail -3 /etc/group
+writers:x:1001:
+tv:x:1002:
+movie:x:1003:
+-----------------------------------------------------
+useradd -c "Carl" -g writers -G tv -m -s /bin/bash
+(creates a user in the writers and tv groups
+------------------------------------------------------
+[11:05:42 root@localhost rickimor93]#groups ccuse
+ccuse : writers tv
+[11:05:47 root@localhost rickimor93]#useradd -c "David" -g writers -G tv -m -s /bin/bash dfury
+[11:06:42 root@localhost rickimor93]#groups dfury
+dfury : writers tv
+[11:06:59 root@localhost rickimor93]#useradd -c "Matt" -g writers -G movie -m -s /bin/bash mdaom
+[11:07:33 root@localhost rickimor93]#groups mdaom
+mdaom : writers movie
+[11:07:50 root@localhost rickimor93]#useradd -c "Ben" -g writers -G movie,tv -m -s /bin/bash baffleck
+[11:08:13 root@localhost rickimor93]#tail -3 /etc/group
+writers:x:1001:
+tv:x:1002:ccuse,dfury,baffleck
+movie:x:1003:mdaom,baffleck
+[11:08:33 root@localhost rickimor93]#grep 1002 /etc/passwd
+dfury:x:1002:1001:David:/home/dfury:/bin/bash
+[11:09:10 root@localhost rickimor93]#grep 1001 /etc/passwd
+ccuse:x:1001:1001:Carl:/home/ccuse:/bin/bash
+dfury:x:1002:1001:David:/home/dfury:/bin/bash
+mdaom:x:1003:1001:Matt:/home/mdaom:/bin/bash
+baffleck:x:1004:1001:Ben:/home/baffleck:/bin/bash
+----------------------------------------------------
+
