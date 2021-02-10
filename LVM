@@ -1,0 +1,27 @@
+LVM - Logical Volume Manager
+
+Layers
+Physical Volumes PVs
+Volume Groups    VGs
+Logical Volumes  LVs
+
+Comandos
+lsblk
+lsblk -p
+df -h
+fdisk -l
+lvmdiskscan
+pvcreate /dev/sdb
+pvs
+vgcreate vg_app /dev/sdb vg_app the name of the disk
+vgs 
+pvs
+lvcreate -L 20G  -n lv_data vg_app to give it a size
+lvs 
+lvdisplay
+mkfs -t ext4 /dev/vg_app/lv_data 
+mkdir /lv_data
+mount /dev/vg_app/lv_data /data 
+df -h /data 
+lvcreate -L 5G -n lv_app vg_app 
+
